@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    min-height: 100vh;
+    font-family: 'Montserrat', 'sans-serif';
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    animation: Gradient 15s ease infinite;
+
+
+
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.container-time {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 75%;
+}
+
+.time {
+    width: 280px;
+    height: auto;
+    background-color: #080808;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15), 0 15px 90px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    
+}
+.label-time {
+    margin: 0 auto;
+    position: relative;
+    height: 50%;
+    width: 280px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 45px;
+    
+}
+.clock {
+    z-index: 1;
+}
+
+.container-period {
+    margin: 0 auto;
+    position: absolute;
+    bottom: 65%;
+}
+
+.period {
+    width: 310px;
+    height: auto;
+    background-color: #080808;
+    border-radius: 5px;
+    padding: 7px 20px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15), 0 15px 90px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    
+}
+
+#label-period {
+    margin: 0 auto;
+    position: relative;
+    height: 50%;
+    width: auto;
+    color: white;
+    text-transform: uppercase;
+    font-size: 23px;
+    
+    
+}
+
+.time-remain {
+    margin: 0 auto;
+    width: 250px;
+    height: auto;
+    background-color: #080808;
+    border-radius: 5px;
+    padding: 7px 16px;
+    text-align: center;
+}
+#time-remainLabel {
+    margin: 0 auto;
+    position: relative;
+    height: 50%;
+    width: auto;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    
+    
+}
