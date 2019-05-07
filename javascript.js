@@ -7,7 +7,6 @@ var pp;
 var time = 0;
 
 
-
 function init() {
     timeDisplay = document.createTextNode("");
     document.getElementById("clock").appendChild(timeDisplay);
