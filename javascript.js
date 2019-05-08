@@ -80,7 +80,7 @@ function currentPeriod() {
 
 
     if ((hours >= 15 && minutes >= 5) || (hours <= 7 && minutes < 45)) {
-        document.getElementById("label-period").innerHTML = "Period: ---";
+        document.getElementById("label-period").innerHTML = "Period: No School";
 
 
     } else {
