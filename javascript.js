@@ -46,10 +46,11 @@ function updateClock() {
 
 }
 
+
+
+
 function revealDariel() {
     document.getElementById("dm").style.opacity = "1";
-
-
 }
 
 function currentPeriod() {
