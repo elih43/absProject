@@ -105,3 +105,13 @@ body {
     
     
 }
+
+.foot {
+    margin: 0 auto;
+    text-align: center;
+    color: whitesmoke;
+    opacity: .5;
+    position: absolute;
+    bottom: 0%;
+    
+}
