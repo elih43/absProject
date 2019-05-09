@@ -5,6 +5,7 @@ var seconds = 0;
 var period;
 var pp;
 var time = 0;
+var myElement = document.querySelector("#dm");
 
 
 function init() {
@@ -41,6 +42,12 @@ function updateClock() {
 
 
 
+
+
+}
+
+function revealDariel() {
+    document.getElementById("dm").style.opacity = "1";
 
 
 }
