@@ -94,6 +94,17 @@ body {
     padding: 7px 16px;
     text-align: center;
 }
+#time-remain-passingLabel {
+    margin: 0 auto;
+    position: relative;
+    height: 50%;
+    width: auto;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    
+    
+}
 #time-remainLabel {
     margin: 0 auto;
     position: relative;

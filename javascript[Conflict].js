@@ -1,9 +1,9 @@
 var count = 0;
-var hours = 13;
-var minutes = 15;
+var hours = 14;
+var minutes = 6;
 var seconds = 0;
 var period;
-var passing = 0;
+var passing;
 var pp = true;
 var time = 0;
 var myElement = document.querySelector("#dm");
@@ -94,8 +94,8 @@ function currentPeriod() {
         } 
         
         else if (((hours == 10 && minutes >= 26) && minutes < 30) || (minutes > 26 && (hours == 10 && minutes < 30))){
-            period = "passing";
-            passing = 60 * (10 - hours) + 30 - minutes;
+            passing = "passing";
+            time = 60 * (10 - hours) + 30 - minutes;
         }
         
         else if ((hours == 10 && minutes >= 30) || (hours == 11 && minutes < 21)) {
@@ -104,8 +104,8 @@ function currentPeriod() {
         } 
         
         else if (((hours == 11 && minutes >= 21) && minutes < 25) || (minutes > 21 && (hours == 11 && minutes < 25))){
-            period = "passing";
-            passing = 60 * (11 - hours) + 25 - minutes;
+            passing = "passing";
+            time = 60 * (11 - hours) + 25 - minutes;
             
         }
         
@@ -115,8 +115,8 @@ function currentPeriod() {
         } 
         
         else if (((hours == 12 && minutes >= 16) && minutes < 20) || (minutes > 16 && (hours == 12 && minutes < 20))){
-            period = "passing";
-            passing = 60 * (12 - hours) + 20 - minutes;
+            passing = "passing";
+            time = 60 * (12 - hours) + 20 - minutes;
             
         }
         
@@ -127,8 +127,8 @@ function currentPeriod() {
         } 
         
         else if (((hours == 13 && minutes >= 11) && minutes < 15) || (minutes > 11 && (hours == 13 && minutes < 15))){
-            period = "passing";
-            passing = 60 * (13 - hours) + 15 - minutes;
+            passing = "passing";
+            time = 60 * (13 - hours) + 15 - minutes;
         
         }
         
@@ -137,9 +137,9 @@ function currentPeriod() {
             time = 60 * (14 - hours) + 6 - minutes;
         } 
         
-        else if (((hours == 14 && minutes >= 6) && minutes < 10) || (minutes > 6 && (hours == 14 && minutes < 10))){
-            period = "passing";
-            passing = 60 * (14 - hours) + 10 - minutes;
+        else if (((hours == 14 && minutes >= 6) && minutes < 31) || (minutes > 40 && (hours == 14 && minutes < 10))){
+            passing = "passing";
+            time = 60 * (14 - hours) + 10 - minutes;
             
         }
         
@@ -162,7 +162,7 @@ function currentPeriod() {
         } else {
             document.getElementById("label-period").innerHTML = "Period: " + period;
             document.getElementById("time-remainLabel").innerHTML = "Minutes left in period: " + time;
-            document.getElementById("time-remain-passingLabel").innerHTML = "Minutes left in passing: " + passing;
+            document.getElementById("time-remain-passingLabel").innerHTML = 
 
 
         }
