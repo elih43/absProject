@@ -1,11 +1,15 @@
 var count = 0;
-var hours = 8;
-var minutes = 38;
+var hours = 14;
+var minutes = 6;
 var seconds = 0;
 var period;
 var pp = true;
 var time = 0;
 var myElement = document.querySelector("#dm");
+
+
+
+
 
 
 function init() {
@@ -34,7 +38,7 @@ function updateClock() {
 
     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
-    document.getElementById("clock").firstChild.nodeValue = currentTimeString; 
+    document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 
 
     var test = setInterval(currentPeriod, 1000);
@@ -53,11 +57,6 @@ function revealDariel() {
     document.getElementById("bottom-text").innerHTML = "created by Eli Hernandez, Dariel Mercado, Daniel Lim, Fernando Nunez, Maylen Ruiz, Nathaly Montoya, Cynric Pigram, Luis Galarza, Isaac Williams, James Charles, Tati, and 'Lexi' Paramo ";
 }
 
-    
-function calcPassing() {
-    
-    
-}
 
 
 function currentPeriod() {
@@ -70,31 +69,88 @@ function currentPeriod() {
         if ((hours == 7 && minutes >= 45) || (hours == 8 && minutes < 36)) {
             period = 1;
             time = 60 * (8 - hours) + 36 - minutes;
-        } else if ((hours == 8 && minutes >= 40) || (hours == 9 && minutes < 31)) {
+        } 
+        
+        else if (((hours == 8 && minutes >= 36) && minutes < 40) || (minutes > 36 && (hours == 8 && minutes < 40))) {
+            time = 60 * (8 - hours) + 40 - minutes;
+            period = "passing";
+        }
+        
+        
+        else if ((hours == 8 && minutes >= 40) || (hours == 9 && minutes < 31)) {
             period = 2;
             time = 60 * (9 - hours) + 31 - minutes;
-        } else if ((hours == 9 && minutes >= 35) || (hours == 10 && minutes < 26)) {
+        } 
+        
+        else if (((hours == 9 && minutes >= 31) && minutes < 35) || (minutes > 31 && (hours == 9 && minutes < 35))) {
+            time = 60 * (9 - hours) + 35 - minutes;
+            period = "passing";
+        }
+        
+        else if ((hours == 9 && minutes >= 35) || (hours == 10 && minutes < 26)) {
             period = 3;
             time = 60 * (10 - hours) + 26 - minutes;
-        } else if ((hours == 10 && minutes >= 30) || (hours == 11 && minutes < 21)) {
+        } 
+        
+        else if (((hours == 10 && minutes >= 26) && minutes < 30) || (minutes > 26 && (hours == 10 && minutes < 30))){
+            period = "passing";
+            time = 60 * (10 - hours) + 30 - minutes;
+        }
+        
+        else if ((hours == 10 && minutes >= 30) || (hours == 11 && minutes < 21)) {
             period = 4;
             time = 60 * (11 - hours) + 21 - minutes;
-        } else if ((hours == 11 && minutes >= 25) || (hours == 12 && minutes < 16)) {
+        } 
+        
+        else if (((hours == 11 && minutes >= 21) && minutes < 25) || (minutes > 21 && (hours == 11 && minutes < 25))){
+            period = "passing";
+            time = 60 * (11 - hours) + 25 - minutes;
+            
+        }
+        
+        else if ((hours == 11 && minutes >= 25) || (hours == 12 && minutes < 16)) {
             period = 5;
             time = 60 * (12 - hours) + 16 - minutes;
-        } else if ((hours == 12 && minutes >= 20) || (hours == 13 && minutes < 11)) {
+        } 
+        
+        else if (((hours == 12 && minutes >= 16) && minutes < 20) || (minutes > 16 && (hours == 12 && minutes < 20))){
+            period = "passing";
+            time = 60 * (12 - hours) + 20 - minutes;
+            
+        }
+        
+        else if ((hours == 12 && minutes >= 20) || (hours == 13 && minutes < 11)) {
             period = 6
             time = 60 * (13 - hours) + 11 - minutes;
 
-        } else if ((hours == 13 && minutes >= 15) || (hours == 14 && minutes < 6)) {
+        } 
+        
+        else if (((hours == 13 && minutes >= 11) && minutes < 15) || (minutes > 11 && (hours == 13 && minutes < 15))){
+            period = "passing";
+            time = 60 * (13 - hours) + 15 - minutes;
+        
+        }
+        
+        else if ((hours == 13 && minutes >= 15) || (hours == 14 && minutes < 6)) {
             period = 7;
             time = 60 * (14 - hours) + 6 - minutes;
-        } else if ((hours == 14 && minutes >= 10) || (hours == 15 && minutes < 5)) {
+        } 
+        
+        else if (((hours == 14 && minutes >= 6) && minutes < 31) || (minutes > 40 && (hours == 14 && minutes < 10))){
+            period = "passing";
+            time = 60 * (14 - hours) + 10 - minutes;
+            
+        }
+        
+        else if ((hours == 14 && minutes >= 10) || (hours == 15 && minutes < 5)) {
             period = 8;
             time = 60 * (15 - hours) + 5 - minutes;
-        } else {
+        } 
+        
+        else {
             pp = true;
             period = "Passing";
+            
         }
 
         //end of day
@@ -140,6 +196,7 @@ function currentPeriod() {
         } else {
             pp = true;
             period = "Passing";
+
 
         }
 
