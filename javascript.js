@@ -50,7 +50,7 @@ function updateClock() {
 
 
 function revealDariel() {
-    document.getElementById("bottom-text").innerHTML = "created by Eli Hernandez, Dariel Mercado, Daniel Lim, Fernando Nunez, Maylen Lero, Nathaly Montoya, Cynric Pigram, Luis Galarza, Isaac Williams, James Charles, Tati, and 'Lexi' Paramo ";
+    document.getElementById("bottom-text").innerHTML = "created by Eli Hernandez, Dariel Mercado, Daniel Lim, Fernando Nunez, Maylen Ruiz, Nathaly Montoya, Cynric Pigram, Luis Galarza, Isaac Williams, James Charles, Tati, and 'Lexi' Paramo ";
 }
 
 function currentPeriod() {
