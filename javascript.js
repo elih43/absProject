@@ -1,9 +1,9 @@
 var count = 0;
 var hours = 8;
-var minutes = 28;
+var minutes = 38;
 var seconds = 0;
 var period;
-var pp;
+var pp = true;
 var time = 0;
 var myElement = document.querySelector("#dm");
 
@@ -34,7 +34,7 @@ function updateClock() {
 
     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
-    document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+    document.getElementById("clock").firstChild.nodeValue = currentTimeString; 
 
 
     var test = setInterval(currentPeriod, 1000);
@@ -53,11 +53,17 @@ function revealDariel() {
     document.getElementById("bottom-text").innerHTML = "created by Eli Hernandez, Dariel Mercado, Daniel Lim, Fernando Nunez, Maylen Ruiz, Nathaly Montoya, Cynric Pigram, Luis Galarza, Isaac Williams, James Charles, Tati, and 'Lexi' Paramo ";
 }
 
+    
+function calcPassing() {
+    
+    
+}
+
+
 function currentPeriod() {
     var currentDayOfWeek = new Date();
 
     var currentDay = currentDayOfWeek.getDay();
-
 
     if (currentDay < 5 && currentDay > 0) {
         //mon-thurs schedule
@@ -107,9 +113,7 @@ function currentPeriod() {
         if ((hours == 7 && minutes >= 45) || (hours == 8 && minutes < 27)) {
             period = 1;
             time = 60 * (8 - hours) + 27 - minutes;
-        }
-        /*there is an error in the logic*/
-        else if ((hours == 8 && minutes >= 31) || (hours == 8 && minutes < 41)) {
+        } else if (((hours == 8 && minutes >= 31) && minutes < 41) || (minutes > 31 && (hours == 8 && minutes < 41))) {
             period = "advisory"
             time = 60 * (8 - hours) + 41 - minutes;
         } else if ((hours == 8 && minutes >= 45) || (hours == 9 && minutes < 27)) {
@@ -136,6 +140,7 @@ function currentPeriod() {
         } else {
             pp = true;
             period = "Passing";
+
         }
 
         //end of day
