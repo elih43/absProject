@@ -1,6 +1,6 @@
 var count = 0;
-var hours = 0;
-var minutes = 0;
+var hours = 8;
+var minutes = 28;
 var seconds = 0;
 var period;
 var pp;
@@ -50,7 +50,7 @@ function updateClock() {
 
 
 function revealDariel() {
-    document.getElementById("dm").style.opacity = "1";
+    document.getElementById("bottom-text").innerHTML = "created by Eli Hernandez, Dariel Mercado, Daniel Lim, Fernando Nunez, Maylen Lero, Nathaly Montoya, Cynric Pigram, Luis Galarza, Isaac Williams, James Charles, Tati, and 'Lexi' Paramo ";
 }
 
 function currentPeriod() {
@@ -107,7 +107,9 @@ function currentPeriod() {
         if ((hours == 7 && minutes >= 45) || (hours == 8 && minutes < 27)) {
             period = 1;
             time = 60 * (8 - hours) + 27 - minutes;
-        } else if ((hours == 8 && minutes >= 31) || (hours == 8 && minutes < 41)) {
+        }
+        /*there is an error in the logic*/
+        else if ((hours == 8 && minutes >= 31) || (hours == 8 && minutes < 41)) {
             period = "advisory"
             time = 60 * (8 - hours) + 41 - minutes;
         } else if ((hours == 8 && minutes >= 45) || (hours == 9 && minutes < 27)) {
