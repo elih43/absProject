@@ -1,10 +1,10 @@
 var count = 0;
-var hours = 13;
-var minutes = 15;
+var hours = 14;
+var minutes = 10;
 var seconds = 0;
 var period;
 var passing = 0;
-var pp = true;
+var pp = false;
 var time = 0;
 var myElement = document.querySelector("#dm");
 
@@ -19,7 +19,7 @@ function init() {
 }
 
 function updateClock() {
-    var currentTime = new Date();
+    /*var currentTime = new Date();
 
     var currentHours = currentTime.getHours();
     var currentMinutes = currentTime.getMinutes();
@@ -39,7 +39,7 @@ function updateClock() {
 
     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
-    document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+    document.getElementById("clock").firstChild.nodeValue = currentTimeString;*/
 
 
     var test = setInterval(currentPeriod, 1000);
@@ -80,24 +80,28 @@ function currentPeriod() {
         } else if (((hours == 8 && minutes >= 36) && minutes < 40) || (minutes > 36 && (hours == 8 && minutes < 40))) {
             period = "passing";
             setTimePassing(8, 40);
+            pp = true;
         } else if ((hours == 8 && minutes >= 40) || (hours == 9 && minutes < 31)) {
             period = 2;
             setTime(9, 31);
         } else if (((hours == 9 && minutes >= 31) && minutes < 35) || (minutes > 31 && (hours == 9 && minutes < 35))) {
             period = "passing";
             setTimePassing(9, 35);
+            pp = true;
         } else if ((hours == 9 && minutes >= 35) || (hours == 10 && minutes < 26)) {
             period = 3;
             setTime(10, 26);
         } else if (((hours == 10 && minutes >= 26) && minutes < 30) || (minutes > 26 && (hours == 10 && minutes < 30))) {
             period = "passing";
             setTimePassing(10, 30);
+            pp = true;
         } else if ((hours == 10 && minutes >= 30) || (hours == 11 && minutes < 21)) {
             period = 4;
             setTime(11, 21);
         } else if (((hours == 11 && minutes >= 21) && minutes < 25) || (minutes > 21 && (hours == 11 && minutes < 25))) {
             period = "passing";
             setTimePassing(11, 25);
+            pp = true;
 
         } else if ((hours == 11 && minutes >= 25) || (hours == 12 && minutes < 16)) {
             period = 5;
@@ -105,6 +109,8 @@ function currentPeriod() {
         } else if (((hours == 12 && minutes >= 16) && minutes < 20) || (minutes > 16 && (hours == 12 && minutes < 20))) {
             period = "passing";
             setTimePassing(12, 20);
+            pp = true;
+
 
         } else if ((hours == 12 && minutes >= 20) || (hours == 13 && minutes < 11)) {
             period = 6
@@ -113,6 +119,7 @@ function currentPeriod() {
         } else if (((hours == 13 && minutes >= 11) && minutes < 15) || (minutes > 11 && (hours == 13 && minutes < 15))) {
             period = "passing";
             setTimePassing(13, 15);
+            pp = true;
 
         } else if ((hours == 13 && minutes >= 15) || (hours == 14 && minutes < 6)) {
             period = 7;
@@ -120,6 +127,7 @@ function currentPeriod() {
         } else if (((hours == 14 && minutes >= 6) && minutes < 10) || (minutes > 6 && (hours == 14 && minutes < 10))) {
             period = "passing";
             setTimePassing(14, 10);
+            pp = true;
 
         } else if ((hours == 14 && minutes >= 10) || (hours == 15 && minutes < 5)) {
             period = 8;
@@ -135,10 +143,24 @@ function currentPeriod() {
             document.getElementById("label-period").innerHTML = "Period: No School";
 
 
+        } else if (pp) {
+            document.getElementById("label-period").innerHTML = "Period: " + period;
+
+            document.getElementById("time-remainLabel").innerHTML = "Minutes left in passing: " + passing;
+
+
+
         } else {
+
+            if (time >= 0 && passing == 1) {
+                passing = 0;
+            }
+            if (passing >= 0 && time == 1) {
+                time = 0;
+            }
+
             document.getElementById("label-period").innerHTML = "Period: " + period;
             document.getElementById("time-remainLabel").innerHTML = "Minutes left in period: " + time;
-            document.getElementById("time-remain-passingLabel").innerHTML = "Minutes left in passing: " + passing;
 
 
         }
