@@ -19,7 +19,7 @@ function init() {
 }
 
 function updateClock() {
-    /*var currentTime = new Date();
+    var currentTime = new Date();
 
     var currentHours = currentTime.getHours();
     var currentMinutes = currentTime.getMinutes();
@@ -39,7 +39,7 @@ function updateClock() {
 
     var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
 
-    document.getElementById("clock").firstChild.nodeValue = currentTimeString;*/
+    document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 
 
     var test = setInterval(currentPeriod, 1000);
