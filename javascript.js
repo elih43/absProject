@@ -24,6 +24,8 @@ function onSignIn(googleUser) {
         console.log( "Name: " + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
+        document.getElementById("greeting").style.display = 'none';
+        document.getElementsByClassName("g-signin2").style.display = 'none';  
         
 
         
