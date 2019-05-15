@@ -24,6 +24,8 @@ function onSignIn(googleUser) {
         test = "Name: " + profile.getName();
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
+        document.getElementById("label-period").innerHTML = test;
+
         
       }
 
@@ -77,8 +79,7 @@ function setTime(endHour, endMinute) {
 
 
 function currentPeriod() {
-    document.getElementById("label-period").innerHTML = test;
-
+    
     
     var currentDayOfWeek = new Date();
 
