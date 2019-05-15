@@ -21,7 +21,7 @@ function init() {
 function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         var x = document.getElementById("greeting");
-        var y = document.getElementById("signin");
+        var y = document.getElementById('g-signin2');
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log( "Name: " + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
