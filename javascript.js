@@ -18,6 +18,14 @@ function init() {
     document.getElementById("clock").appendChild(timeDisplay);
 }
 
+function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        period = "Name: " + profile.getName();
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+      }
+
 function updateClock() {
     var currentTime = new Date();
 
