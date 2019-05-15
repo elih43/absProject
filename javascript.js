@@ -21,10 +21,10 @@ function init() {
 function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        test = "Name: " + profile.getName();
+        console.log( "Name: " + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
-        document.getElementById("label-period").innerHTML = test;
+        
 
         
       }
@@ -177,7 +177,7 @@ function currentPeriod() {
                 time = 0;
             }
 
-            //document.getElementById("label-period").innerHTML = "Period: " + period;
+            document.getElementById("label-period").innerHTML = "Period: " + period;
             document.getElementById("time-remainLabel").innerHTML = "Minutes left in period: " + time;
 
 
