@@ -21,13 +21,13 @@ function init() {
 function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         var x = document.getElementById("greeting");
-        var y = document.getElementById("g-signin2");
+        var y = document.getElementById("signin");
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log( "Name: " + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
         x.style.display = 'none';
-        document.getElementsByClassName("g-signin2").style.display = 'none';  
+        y.style.display = 'none';  
         
 
         
