@@ -7,7 +7,7 @@ var passing = 0;
 var pp = false;
 var time = 0;
 var myElement = document.querySelector("#dm");
-
+var test;
 
 
 
@@ -21,9 +21,10 @@ function init() {
 function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-        period = "Name: " + profile.getName();
+        test = "Name: " + profile.getName();
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail());
+        
       }
 
 function updateClock() {
@@ -76,6 +77,9 @@ function setTime(endHour, endMinute) {
 
 
 function currentPeriod() {
+    document.getElementById("label-period").innerHTML = test;
+
+    
     var currentDayOfWeek = new Date();
 
     var currentDay = currentDayOfWeek.getDay();
@@ -172,7 +176,7 @@ function currentPeriod() {
                 time = 0;
             }
 
-            document.getElementById("label-period").innerHTML = "Period: " + period;
+            //document.getElementById("label-period").innerHTML = "Period: " + period;
             document.getElementById("time-remainLabel").innerHTML = "Minutes left in period: " + time;
 
 
