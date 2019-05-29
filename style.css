@@ -31,7 +31,7 @@ body {
     text-align: center;
     color: whitesmoke;
     position: absolute;
-    font-size: 30px;
+    font-size: 25px;
     bottom: 50%;
     z-index: 3;
 
@@ -59,7 +59,7 @@ body {
     }
 
     to {
-        width: 23%;
+        width: 20%;
     }
 }
 
