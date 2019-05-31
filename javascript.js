@@ -69,9 +69,9 @@ function updateClock() {
 
 
 
-function revealDariel() {
+/*function revealDariel() {
     document.getElementById("bottom-text").innerHTML = "created by Eli Hernandez, Dariel Mercado, Daniel Lim, Fernando Nunez, Maylen Ruiz, Nathaly Montoya, Cynric Pigram, Luis Galarza, Isaac Williams, James Charles, Tati, Lexi Paramo, Nintendogs, and Vicente Vargas";
-}
+}*/
 
 function setTimePassing(endHour, endMinute) {
     passing = 60 * (endHour - hours) + endMinute - minutes;
@@ -121,7 +121,7 @@ function currentPeriod() {
             setTimePassing(11, 25);
             pp = true;
 
-        } else if ((hours == 11 && minutes >= 25) || (hours == 12 && minutes < 16)) {
+        } else if (((hours == 11 && minutes >= 25) && minutes < 16)  || (minutes > 25 (hours == 12 && minutes < 16))) {
             period = 5;
             setTime(12, 16);
         } else if (((hours == 12 && minutes >= 16) && minutes < 20) || (minutes > 16 && (hours == 12 && minutes < 20))) {
