@@ -121,7 +121,7 @@ function currentPeriod() {
             setTimePassing(11, 25);
             pp = true;
 
-        } else if (((hours == 11 && minutes >= 25) && minutes < 16)  || (minutes > 25 (hours == 12 && minutes < 16))) {
+        } else if ((hours == 11 && minutes >= 25)  || (hours == 12 && minutes < 16)) {
             period = 5;
             setTime(12, 16);
         } else if (((hours == 12 && minutes >= 16) && minutes < 20) || (minutes > 16 && (hours == 12 && minutes < 20))) {
@@ -228,7 +228,7 @@ function currentPeriod() {
             period = "passing";
             setTimePassing(11, 3);
             pp = true;
-        } else if ((hours == 11 && minutes >= 3) || (hours == 11 && minutes < 45)) {
+        } else if (((hours == 11 && minutes >= 3) && minutes < 45) || (minutes > 3 && (hours == 11 && minutes < 45))) {
             period = 5;
             setTime(11, 45);
         } else if (((hours == 11 && minutes >= 45) && minutes < 49) || (minutes > 45 && (hours == 11 && minutes < 49))) {
