@@ -198,7 +198,7 @@ function currentPeriod() {
             //fix time
         } else if (((hours == 8 && minutes >= 27) && minutes < 31) || (minutes > 27 && (hours == 8 && minutes < 31))) {
             period = "passing";
-            setTimePassing(7, 31);
+            setTimePassing(8, 31);
             pp = true;
         } else if (((hours == 8 && minutes >= 31) && minutes < 41) || (minutes > 31 && (hours == 8 && minutes < 41))) {
             period = "advisory"
