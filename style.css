@@ -1,3 +1,8 @@
+/* ###########################
+      BACKGROUND FORMATTING
+   ########################### */
+
+
 body {
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
@@ -26,7 +31,7 @@ body {
     }
 }
 
-#carnival {
+#text {
     margin: 0 auto;
     text-align: center;
     color: whitesmoke;
@@ -64,24 +69,107 @@ body {
     }
 }
 
+
+
+
+
+/* ###########################
+        TABLE FORMATTING
+   ########################### */
+
+.table-title {
+    margin: 0 auto;
+    position: absolute;
+    top: 25%;
+    font-size: 1.5em;
+    color: white;
+    z-index: 3;
+}
+.flat-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    z-index: 3;
+}
+
+.flat-table th,
+.flat-table td {
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.flat-table th {
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    padding:  0.7em;
+    color: rgba(0, 0, 0, 0.45);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+}
+
+.flat-table td {
+    color: #f7f7f7;
+    padding: 1em 0.1em 0.1em 1em;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
+    font-size: 1.2em;
+}
+
+.flat-table tr {
+    -webkit-transition: background 0.3s, box-shadow 0.3s;
+    -moz-transition: background 0.3s, box-shadow 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.flat-table-1 {
+    background: #8783D1;
+}
+
+.flat-table-1 tr:hover {
+    background: rgba(0, 0, 0, 0.19);
+}
+
+
+
 .fix {
     padding: 20px;
     z-index: 4;
     border-color: black;
 }
 
-.greeting {
+
+
+
+
+/* ###########################
+           WINDOW DIM
+   ########################### */
+
+
+.dim {
     margin: 0 auto;
     width: 100%;
     height: 120%;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;
     z-index: 2;
     position: absolute;
 
 
 
 }
+
+
+
+
+
+/* ###########################
+         GOOGLE SIGN IN 
+   ########################### */
+
 
 #signin {
     z-index: 4;
@@ -91,6 +179,15 @@ body {
     z-index: 5;
     margin: 0 auto;
 }
+
+
+
+
+
+/* ###########################
+              CLOCK
+   ########################### */
+
 
 .container-time {
     margin: 0 auto;
@@ -123,6 +220,15 @@ body {
 .clock {
     z-index: 1;
 }
+
+
+
+
+
+/* ###########################
+          PERIOD INFO
+   ########################### */
+
 
 .container-period {
     margin: 0 auto;
@@ -186,6 +292,15 @@ body {
 
 
 }
+
+
+
+
+
+/* ##########################
+            CREDITS
+   ########################## */
+
 
 .foot {
     margin: 0 auto;
