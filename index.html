@@ -5,7 +5,14 @@
 <head>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
+    
+    
+    
+    <!--
+##########################
+META TAGS/ASSETS
+##########################
+-->
 
 
     <meta charset="UTF-8">
@@ -29,7 +36,6 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-139874085-1');
-
     </script>
 
 
@@ -38,14 +44,95 @@
 
 
 </head>
+    
+    
 
+    
+    
 <body onload="updateClock(); setInterval('updateClock()', 1000)">
+    
+    
+    
+    
+    
+    <!--
+##########################
+TIME DISPLAY  
+##########################
+-->
 
 
-    <div class="dim"></div>
+    <div class="container-time">
+
+        <div class="time">
+
+            <p class="label-time">
+
+                <span id="clock">&nbsp;</span>
+
+            </p>
+
+        </div>
+
+    </div>
 
 
-    <!--   
+
+
+
+    <!--
+##########################
+PERIOD CONTAINERS  
+##########################
+-->
+
+
+    <div class="container-period">
+
+        <div class="period">
+
+            <div id="label-period">
+                period: ---
+
+            </div>
+            <div class="time-remain">
+                <div id="time-remainLabel">
+                    Minutes left in period: ---
+
+
+                </div>
+            </div>
+            <div class="time-remain-passing">
+                <div id="time-remain-passingLabel">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+    
+    
+    
+    <!--
+##########################
+CREDITS 
+##########################
+-->
+
+
+    <div class="foot">
+        <small><b style="opacity: 1;" onclick="revealDariel()">Alcott Bell Schedule:</b> </small>
+        <small id="bottom-text">created by Eli Hernandez</small>
+    </div>
+    
+    
+    
+    
+    
+     <!--   
 ##########################
 FINAL SCHEDHULE    
 ##########################
@@ -87,11 +174,23 @@ FINAL SCHEDHULE
 
 
     </table>
-
-
 -->
 
 
+    
+    
+    
+    <!--
+##########################
+WINDOW DIM  
+##########################
+-->
+    
+    
+    <div class="dim"></div>
+
+
+   
 
 
     <!--
@@ -101,66 +200,10 @@ GOOGLE SIGN-IN
 
 
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-
 -->
 
-
-
-    <div class="container-time">
-
-        <div class="time">
-
-            <p class="label-time">
-
-                <span id="clock">&nbsp;</span>
-
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="container-table">
-
-
-
-    </div>
-
-    <div class="container-period">
-
-        <div class="period">
-
-            <div id="label-period">
-                period: ---
-
-            </div>
-            <div class="time-remain">
-                <div id="time-remainLabel">
-                    Minutes left in period: ---
-
-
-                </div>
-            </div>
-            <div class="time-remain-passing">
-                <div id="time-remain-passingLabel">
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="foot">
-        <small><b style="opacity: 1;" onclick="revealDariel()">Alcott Bell Schedule:</b> </small>
-        <small id="bottom-text">created by Eli Hernandez</small>
-    </div>
-
-
-
-
-</body>
-
-</html>
+    
+    
+    
+    
+</body></html>
